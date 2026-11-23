@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Daily Brew — 3-Page Responsive Proof of Work</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 12mm 15mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #30231D;
+      background: #FFFFFF;
+      -webkit-font-smoothing: antialiased;
+    }
+    .page {
+      width: 100%;
+      min-height: 270mm;
+      max-height: 270mm;
+      page-break-after: always;
+      position: relative;
+      display: flex;
+      flex-col;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+    .page:last-child {
+      page-break-after: avoid;
+    }
+    .header-tag {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 2px solid #D9C6A5;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+    .header-title {
+      font-family: 'Georgia', serif;
+      font-size: 18pt;
+      color: #1F1713;
+      font-weight: normal;
+    }
+    .header-meta {
+      font-size: 9pt;
+      color: #8C7C6A;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    .frame-container {
+      background: #F7F3EB;
+      border: 1px solid #D9C6A5;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(48, 35, 29, 0.08);
+      margin-bottom: 10px;
+    }
+    .browser-bar {
+      background: #EBE0CC;
+      padding: 6px 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid #D9C6A5;
+    }
+    .dots {
+      display: flex;
+      gap: 5px;
+    }
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+    }
+    .dot-red { background: #FF5F56; }
+    .dot-yellow { background: #FFBD2E; }
+    .dot-green { background: #27C93F; }
+    .url-bar {
+      background: #FFFFFF;
+      border-radius: 3px;
+      padding: 2px 10px;
+      font-size: 8pt;
+      color: #6E604F;
+      flex: 1;
+      max-width: 320px;
+      margin-left: 10px;
+      border: 1px solid #D9C6A5;
+    }
+    .proof-footer {
+      border-top: 1px solid #EAE4D9;
+      padding-top: 6px;
+      font-size: 8pt;
+      color: #A99A88;
+      display: flex;
+      justify-content: space-between;
+    }
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      background: #FAF8F4;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #EAE4D9;
+      font-size: 8pt;
+    }
+    .spec-item strong {
+      display: block;
+      color: #49372D;
+      font-size: 7.5pt;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= PAGE 1: DESKTOP VIEW ================= -->
+  <div class="page">
+    <div>
+      <div class="header-tag">
+        <div>
+          <h1 class="header-title">THE DAILY BREW — Proof of Work</h1>
+          <span style="font-size: 9.5pt; color: #6E604F; font-family: 'Georgia', serif; font-style: italic;">
+            Proof Document 1 of 3: Desktop View (Large Viewport: 1440px &times; 900px)
+          </span>
+        </div>
+        <div class="header-meta">PAGE 1 / 3 &bull; DESKTOP</div>
+      </div>
+
+      <!-- Desktop Browser Mockup Frame -->
+      <div class="frame-container">
+        <div class="browser-bar">
+          <div class="dots">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-yellow"></div>
+            <div class="dot dot-green"></div>
+          </div>
+          <div class="url-bar">https://the-daily-brew.cafe/ (Desktop Resolution)</div>
+          <span style="font-size: 7.5pt; color: #27C93F; font-weight: bold; margin-left: auto;">&bull; 256-Bit SSL Secure</span>
+        </div>
+
+        <!-- Rendered Desktop UI Mockup -->
+        <div style="background: #F7F3EB; padding: 0; min-height: 180mm;">
+          
+          <!-- Desktop Nav -->
+          <div style="background: rgba(255,254,250,0.95); padding: 10px 24px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #D9C6A5;">
+            <div>
+              <span style="font-family: 'Georgia', serif; font-size: 13pt; letter-spacing: 2px; color: #30231D; font-weight: bold;">THE DAILY BREW</span>
+              <span style="display: block; font-size: 6pt; letter-spacing: 2px; color: #8C7C6A;">BOUTIQUE CAFÉ &amp; KITCHEN</span>
+            </div>
+            <div style="display: flex; gap: 16px; font-size: 7.5pt; letter-spacing: 1.5px; text-transform: uppercase; color: #49372D; font-weight: 500;">
+              <span style="font-weight: bold; border-bottom: 1.5px solid #BF9E6B;">Home</span>
+              <span>Our Menu</span>
+              <span>Our Story</span>
+              <span>Experiences</span>
+              <span>Offers</span>
+              <span>Contact</span>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <span style="font-size: 7.5pt; text-transform: uppercase; letter-spacing: 1px; color: #30231D; background: #EEE7D9; padding: 4px 8px; border-radius: 2px;">Bag (0)</span>
+              <span style="font-size: 7.5pt; text-transform: uppercase; letter-spacing: 1.5px; background: #30231D; color: #FFFEFA; padding: 4px 10px; border-radius: 3px;">Order Now</span>
+            </div>
+          </div>
+
+          <!-- Desktop Hero Section -->
+          <div style="background: linear-gradient(rgba(31,23,19,0.7), rgba(31,23,19,0.7)), url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80') center/cover; padding: 36px 20px; text-align: center; color: #FFFEFA;">
+            <span style="font-size: 7.5pt; letter-spacing: 2.5px; text-transform: uppercase; color: #D9C6A5; border: 1px solid rgba(217,198,165,0.4); padding: 3px 10px; border-radius: 20px; display: inline-block; margin-bottom: 10px;">
+              A LUXURY BOUTIQUE CAFÉ &amp; KITCHEN
+            </span>
+            <h2 style="font-family: 'Georgia', serif; font-size: 26pt; font-weight: normal; line-height: 1.1; margin-bottom: 8px;">
+              Slow Down. <br><span style="font-style: italic; color: #D9C6A5;">Sip Something Beautiful.</span>
+            </h2>
+            <p style="font-size: 8.5pt; color: #E4D9C4; max-width: 440px; margin: 0 auto 16px auto; font-weight: 300; line-height: 1.4;">
+              Thoughtfully crafted coffee, exquisite flavours and beautiful moments. Discover your everyday escape at The Daily Brew.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 10px;">
+              <span style="background: #D9C6A5; color: #1F1713; font-size: 7.5pt; font-weight: bold; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 14px; border-radius: 3px;">
+                Explore Our Menu &rarr;
+              </span>
+              <span style="background: rgba(31,23,19,0.8); color: #FFFEFA; border: 1px solid rgba(217,198,165,0.5); font-size: 7.5pt; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 14px; border-radius: 3px;">
+                Order Your Favourites
+              </span>
+            </div>
+          </div>
+
+          <!-- Desktop Philosophy & Signature Split -->
+          <div style="padding: 18px 24px;">
+            <div style="display: grid; grid-template-columns: 1.2fr 1.8fr; gap: 18px; align-items: center;">
+              <div>
+                <span style="font-size: 7pt; letter-spacing: 2px; text-transform: uppercase; color: #9E7E4E; font-weight: bold;">OUR PHILOSOPHY</span>
+                <h3 style="font-family: 'Georgia', serif; font-size: 13pt; color: #1F1713; font-weight: normal; margin: 4px 0;">An Architectural Reverence for Coffee</h3>
+                <p style="font-size: 7.5pt; color: #6E604F; line-height: 1.4;">High-elevation single-origin Arabica slow-roasted in micro-batches. Morning viennoiserie baked before dawn with Normandy butter.</p>
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;">
+                <div style="background: #FFFFFF; border: 1px solid #D9C6A5; border-radius: 3px; padding: 6px; text-align: center;">
+                  <div style="height: 50px; background: url('https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=300&q=80') center/cover; border-radius: 2px;"></div>
+                  <span style="font-family: 'Georgia', serif; font-size: 7.5pt; font-weight: bold; display: block; margin-top: 3px;">Spanish Latte</span>
+                  <span style="font-size: 7pt; color: #1F1713; font-weight: bold;">₹220</span>
+                </div>
+                <div style="background: #FFFFFF; border: 1px solid #D9C6A5; border-radius: 3px; padding: 6px; text-align: center;">
+                  <div style="height: 50px; background: url('https://images.unsplash.com/photo-1645112411341-6c4fd023714a?auto=format&fit=crop&w=300&q=80') center/cover; border-radius: 2px;"></div>
+                  <span style="font-family: 'Georgia', serif; font-size: 7.5pt; font-weight: bold; display: block; margin-top: 3px;">Alfredo Pasta</span>
+                  <span style="font-size: 7pt; color: #1F1713; font-weight: bold;">₹320</span>
+                </div>
+                <div style="background: #FFFFFF; border: 1px solid #D9C6A5; border-radius: 3px; padding: 6px; text-align: center;">
+                  <div style="height: 50px; background: url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=300&q=80') center/cover; border-radius: 2px;"></div>
+                  <span style="font-family: 'Georgia', serif; font-size: 7.5pt; font-weight: bold; display: block; margin-top: 3px;">Butter Croissant</span>
+                  <span style="font-size: 7pt; color: #1F1713; font-weight: bold;">₹160</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Technical Architecture Specs for Desktop -->
+      <div class="spec-grid">
+        <div class="spec-item">
+          <strong>Grid Framework</strong>
+          12-Column Responsive CSS Grid
+        </div>
+        <div class="spec-item">
+          <strong>Breakpoint</strong>
+          Desktop (&ge; 1024px)
+        </div>
+        <div class="spec-item">
+          <strong>Navigation Mode</strong>
+          Full Horizontal Sticky Navbar
+        </div>
+        <div class="spec-item">
+          <strong>Visual Hierarchy</strong>
+          Editorial Asymmetric Split Layout
+        </div>
+      </div>
+    </div>
+
+    <div class="proof-footer">
+      <span>THE DAILY BREW &bull; Academic Proof of Work &bull; Desktop Viewport</span>
+      <span>Published Repo: https://github.com/Akanksha-124/The-Daily-Brew</span>
+    </div>
+  </div>
+
+  <!-- ================= PAGE 2: TABLET VIEW ================= -->
+  <div class="page">
+    <div>
+      <div class="header-tag">
+        <div>
+          <h1 class="header-title">THE DAILY BREW — Proof of Work</h1>
+          <span style="font-size: 9.5pt; color: #6E604F; font-family: 'Georgia', serif; font-style: italic;">
+            Proof Document 2 of 3: Tablet View (Medium Viewport: 768px &times; 1024px iPad)
+          </span>
+        </div>
+        <div class="header-meta">PAGE 2 / 3 &bull; TABLET</div>
+      </div>
+
+      <!-- Tablet Frame Mockup -->
+      <div class="frame-container" style="max-width: 580px; margin: 0 auto 10px auto;">
+        <div class="browser-bar">
+          <div class="dots">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-yellow"></div>
+            <div class="dot dot-green"></div>
+          </div>
+          <div class="url-bar">https://the-daily-brew.cafe/ (iPad 768px Viewport)</div>
+        </div>
+
+        <div style="background: #F7F3EB; padding: 0; min-height: 180mm;">
+          
+          <!-- Tablet Header -->
+          <div style="background: #FFFEFA; padding: 10px 18px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #D9C6A5;">
+            <div>
+              <span style="font-family: 'Georgia', serif; font-size: 11pt; letter-spacing: 1.5px; color: #30231D; font-weight: bold;">THE DAILY BREW</span>
+              <span style="display: block; font-size: 5.5pt; letter-spacing: 1.5px; color: #8C7C6A;">BOUTIQUE CAFÉ &amp; KITCHEN</span>
+            </div>
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <span style="font-size: 7pt; text-transform: uppercase; background: #30231D; color: #FFF; padding: 3px 8px; border-radius: 2px;">Bag (0)</span>
+              <span style="font-size: 11pt; color: #30231D; padding: 2px 6px; border: 1px solid #D9C6A5; border-radius: 2px;">&#9776;</span>
+            </div>
+          </div>
+
+          <!-- Tablet Hero -->
+          <div style="background: linear-gradient(rgba(31,23,19,0.75), rgba(31,23,19,0.75)), url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80') center/cover; padding: 30px 16px; text-align: center; color: #FFFEFA;">
+            <span style="font-size: 6.5pt; letter-spacing: 2px; text-transform: uppercase; color: #D9C6A5; border: 1px solid rgba(217,198,165,0.4); padding: 2px 8px; border-radius: 16px;">
+              A LUXURY BOUTIQUE CAFÉ
+            </span>
+            <h2 style="font-family: 'Georgia', serif; font-size: 21pt; font-weight: normal; margin: 8px 0;">
+              Slow Down. <br><span style="font-style: italic; color: #D9C6A5;">Sip Something Beautiful.</span>
+            </h2>
+            <p style="font-size: 8pt; color: #E4D9C4; max-width: 360px; margin: 0 auto 12px auto; font-weight: 300;">
+              Thoughtfully crafted coffee, exquisite flavours and beautiful moments.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 8px;">
+              <span style="background: #D9C6A5; color: #1F1713; font-size: 7pt; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; padding: 5px 12px; border-radius: 2px;">Explore Menu</span>
+              <span style="background: rgba(31,23,19,0.8); color: #FFF; border: 1px solid rgba(217,198,165,0.4); font-size: 7pt; letter-spacing: 1px; text-transform: uppercase; padding: 5px 12px; border-radius: 2px;">Order Now</span>
+            </div>
+          </div>
+
+          <!-- Tablet 2-Column Responsive Cards -->
+          <div style="padding: 14px 16px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+              <span style="font-family: 'Georgia', serif; font-size: 11pt; color: #30231D;">Signature Selection</span>
+              <span style="font-size: 6.5pt; text-transform: uppercase; letter-spacing: 1px; color: #9E7E4E; font-weight: bold;">View All &rarr;</span>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+              <div style="background: #FFF; border: 1px solid #D9C6A5; border-radius: 3px; padding: 8px; display: flex; gap: 8px; align-items: center;">
+                <div style="width: 55px; height: 55px; background: url('https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=300&q=80') center/cover; border-radius: 2px; flex-shrink: 0;"></div>
+                <div>
+                  <span style="font-family: 'Georgia', serif; font-size: 8pt; font-weight: bold; display: block;">Spanish Latte</span>
+                  <span style="font-size: 6.5pt; color: #6E604F;">Ristretto with condensed milk</span>
+                  <span style="font-size: 7.5pt; color: #1F1713; font-weight: bold; display: block; margin-top: 2px;">₹220</span>
+                </div>
+              </div>
+              <div style="background: #FFF; border: 1px solid #D9C6A5; border-radius: 3px; padding: 8px; display: flex; gap: 8px; align-items: center;">
+                <div style="width: 55px; height: 55px; background: url('https://images.unsplash.com/photo-1645112411341-6c4fd023714a?auto=format&fit=crop&w=300&q=80') center/cover; border-radius: 2px; flex-shrink: 0;"></div>
+                <div>
+                  <span style="font-family: 'Georgia', serif; font-size: 8pt; font-weight: bold; display: block;">Alfredo Fettuccine</span>
+                  <span style="font-size: 6.5pt; color: #6E604F;">Bronze-die pasta in cream</span>
+                  <span style="font-size: 7.5pt; color: #1F1713; font-weight: bold; display: block; margin-top: 2px;">₹320</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Technical Architecture Specs for Tablet -->
+      <div class="spec-grid">
+        <div class="spec-item">
+          <strong>Tablet Viewport</strong>
+          768px &ndash; 1023px Breakpoint
+        </div>
+        <div class="spec-item">
+          <strong>Grid Adaptation</strong>
+          2-Column Fluid Card Layout
+        </div>
+        <div class="spec-item">
+          <strong>Navigation Mode</strong>
+          Compact Collapsible Header
+        </div>
+        <div class="spec-item">
+          <strong>Touch Targets</strong>
+          Minimum 44px Interaction Area
+        </div>
+      </div>
+    </div>
+
+    <div class="proof-footer">
+      <span>THE DAILY BREW &bull; Academic Proof of Work &bull; Tablet Viewport</span>
+      <span>Published Repo: https://github.com/Akanksha-124/The-Daily-Brew</span>
+    </div>
+  </div>
+
+  <!-- ================= PAGE 3: MOBILE VIEW ================= -->
+  <div class="page">
+    <div>
+      <div class="header-tag">
+        <div>
+          <h1 class="header-title">THE DAILY BREW — Proof of Work</h1>
+          <span style="font-size: 9.5pt; color: #6E604F; font-family: 'Georgia', serif; font-style: italic;">
+            Proof Document 3 of 3: Mobile View (Compact Viewport: 375px &times; 812px iPhone)
+          </span>
+        </div>
+        <div class="header-meta">PAGE 3 / 3 &bull; MOBILE</div>
+      </div>
+
+      <!-- Mobile Phone Frame Mockup -->
+      <div class="frame-container" style="max-width: 320px; margin: 0 auto 10px auto; border-radius: 12px; border: 2px solid #30231D;">
+        <div style="background: #30231D; color: #FFF; padding: 4px 10px; display: flex; justify-content: space-between; align-items: center; font-size: 6.5pt;">
+          <span>9:41</span>
+          <div style="width: 38px; height: 5px; background: #000; border-radius: 10px;"></div>
+          <span>5G &bull; 100%</span>
+        </div>
+
+        <div style="background: #F7F3EB; padding: 0; min-height: 180mm;">
+          
+          <!-- Mobile Header -->
+          <div style="background: #FFFEFA; padding: 8px 12px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #D9C6A5;">
+            <div>
+              <span style="font-family: 'Georgia', serif; font-size: 9.5pt; letter-spacing: 1.5px; color: #30231D; font-weight: bold;">THE DAILY BREW</span>
+              <span style="display: block; font-size: 4.5pt; letter-spacing: 1.5px; color: #8C7C6A;">BOUTIQUE CAFÉ</span>
+            </div>
+            <div style="display: flex; gap: 6px; align-items: center;">
+              <span style="font-size: 6pt; background: #30231D; color: #FFF; padding: 2px 5px; border-radius: 2px;">Bag</span>
+              <span style="font-size: 9pt; color: #30231D; padding: 1px 4px; border: 1px solid #D9C6A5;">&#9776;</span>
+            </div>
+          </div>
+
+          <!-- Mobile Hero -->
+          <div style="background: linear-gradient(rgba(31,23,19,0.8), rgba(31,23,19,0.8)), url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80') center/cover; padding: 22px 12px; text-align: center; color: #FFFEFA;">
+            <span style="font-size: 5.5pt; letter-spacing: 1.5px; text-transform: uppercase; color: #D9C6A5; border: 0.5px solid rgba(217,198,165,0.4); padding: 1px 6px; border-radius: 10px;">
+              BOUTIQUE CAFÉ &amp; KITCHEN
+            </span>
+            <h2 style="font-family: 'Georgia', serif; font-size: 16pt; font-weight: normal; margin: 6px 0; line-height: 1.15;">
+              Slow Down. <br><span style="font-style: italic; color: #D9C6A5;">Sip Something Beautiful.</span>
+            </h2>
+            <p style="font-size: 6.5pt; color: #E4D9C4; margin: 0 auto 10px auto; font-weight: 300;">
+              Thoughtfully crafted coffee &amp; little moments.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 4px; max-width: 160px; margin: 0 auto;">
+              <span style="background: #D9C6A5; color: #1F1713; font-size: 6pt; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; padding: 5px; border-radius: 2px;">Explore Menu &rarr;</span>
+              <span style="background: rgba(31,23,19,0.8); color: #FFF; border: 1px solid rgba(217,198,165,0.4); font-size: 6pt; letter-spacing: 1px; text-transform: uppercase; padding: 4px; border-radius: 2px;">Order Now</span>
+            </div>
+          </div>
+
+          <!-- Mobile Single-Column Touch Cards -->
+          <div style="padding: 10px 12px;">
+            <span style="font-size: 6pt; letter-spacing: 1.5px; text-transform: uppercase; color: #9E7E4E; font-weight: bold; display: block; margin-bottom: 4px;">SIGNATURE SELECTION</span>
+            
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+              <!-- Item 1 -->
+              <div style="background: #FFF; border: 1px solid #D9C6A5; border-radius: 3px; padding: 6px; display: flex; gap: 6px; align-items: center;">
+                <div style="width: 45px; height: 45px; background: url('https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=200&q=80') center/cover; border-radius: 2px; flex-shrink: 0;"></div>
+                <div style="flex: 1;">
+                  <span style="font-family: 'Georgia', serif; font-size: 7.5pt; font-weight: bold; display: block;">Spanish Latte</span>
+                  <span style="font-size: 6.5pt; color: #1F1713; font-weight: bold;">₹220</span>
+                </div>
+                <span style="font-size: 5.5pt; text-transform: uppercase; background: #30231D; color: #FFF; padding: 3px 6px; border-radius: 2px;">+ Add</span>
+              </div>
+              
+              <!-- Item 2 -->
+              <div style="background: #FFF; border: 1px solid #D9C6A5; border-radius: 3px; padding: 6px; display: flex; gap: 6px; align-items: center;">
+                <div style="width: 45px; height: 45px; background: url('https://images.unsplash.com/photo-1645112411341-6c4fd023714a?auto=format&fit=crop&w=200&q=80') center/cover; border-radius: 2px; flex-shrink: 0;"></div>
+                <div style="flex: 1;">
+                  <span style="font-family: 'Georgia', serif; font-size: 7.5pt; font-weight: bold; display: block;">Alfredo Pasta</span>
+                  <span style="font-size: 6.5pt; color: #1F1713; font-weight: bold;">₹320</span>
+                </div>
+                <span style="font-size: 5.5pt; text-transform: uppercase; background: #30231D; color: #FFF; padding: 3px 6px; border-radius: 2px;">+ Add</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Technical Architecture Specs for Mobile -->
+      <div class="spec-grid">
+        <div class="spec-item">
+          <strong>Mobile Viewport</strong>
+          &lt; 640px Screen Width
+        </div>
+        <div class="spec-item">
+          <strong>Layout Mode</strong>
+          Single-Column Vertical Stack
+        </div>
+        <div class="spec-item">
+          <strong>Drawer Menu</strong>
+          Full-Screen Slide-In Navigation
+        </div>
+        <div class="spec-item">
+          <strong>Touch Optimization</strong>
+          Zero Horizontal Overflow Scroll
+        </div>
+      </div>
+    </div>
+
+    <div class="proof-footer">
+      <span>THE DAILY BREW &bull; Academic Proof of Work &bull; Mobile Viewport</span>
+      <span>Published Repo: https://github.com/Akanksha-124/The-Daily-Brew</span>
+    </div>
+  </div>
+
+</body>
+</html>
