@@ -463,3 +463,4 @@ with open('THE_DAILY_BREW_SCREENSHOTS_3_PAGE_PROOF.html', 'w', encoding='utf-8')
     f.write(screenshots_pdf_html)
 
 print("Created THE_DAILY_BREW_SCREENSHOTS_3_PAGE_PROOF.html successfully!")
+
